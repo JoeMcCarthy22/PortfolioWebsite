@@ -2384,16 +2384,21 @@ input, select, textarea {
 				width: 100%;
 			}
 
-		.image.fit {
-			display: block;
-			margin: 0 0 2em 0;
-			width: 100%;
-		}
+			.image.fit {
+				display: block;
+				margin: 0 0 2em 0;
+				width: 100%;
+				
+				object-fit: cover; /* Ensures the image fills the width */
+				object-position: top; /* Moves the visible part to the top */
+			}
+			
 
 			.image.fit img {
 				width: 100%;
 				height: 675px;
 				object-fit: cover; /* no stretch */
+				object-position: top; /* Moves the visible part to the top */
 			}
 
 /* List */
