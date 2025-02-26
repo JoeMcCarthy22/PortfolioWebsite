@@ -2401,6 +2401,44 @@ input, select, textarea {
 				object-position: top; /* Moves the visible part to the top */
 			}
 
+/* Scrolling effects for Portfolio Images */
+
+/* Wrapper for each image column to allow scrolling */
+.image-wrapper {
+    overflow: hidden;
+    position: relative;
+    height: 675px; /* Adjust this to match the visible part of the image */
+}
+
+/* Scrolling content for the images */
+.image-wrapper .image.fit {
+    display: block;
+    width: 100%;
+    animation: scrollImage 70s linear infinite; /* Adjust duration for scroll speed */
+}
+
+/* Scrolling animation */
+@keyframes scrollImage {
+    0% {
+        transform: translateY(0);  /* Start position */
+    }
+    100% {
+        transform: translateY(-100%); /* Move up, revealing the full image */
+    }
+}
+
+/* Image Styling */
+.image.fit img {
+    width: 100%;
+    height: auto;
+    min-height: 1350px; /* Makes the image taller than the visible area, allowing scrolling */
+    object-fit: cover;
+    object-position: top;
+}
+
+
+
+
 /* List */
 
 	ol {
